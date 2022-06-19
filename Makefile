@@ -1,7 +1,11 @@
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
-		
+
+install-azure:
+	pip install --upgrade pip &&\
+		pip install -r requirements-azure.txt
+
 format:
 	black *.py
 	
@@ -13,4 +17,6 @@ test:
 	
 all:
 	install format lint test
-	
+
+all-azure:
+	install format lint test
